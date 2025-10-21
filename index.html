@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Happy Birthday Virat Sir 🎉</title>
+  <style>
+    /* Reset & base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #ff6ec4, #7873f5);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      overflow-x: hidden;
+    }
+
+    h1,
+    h2,
+    h3 {
+      text-align: center;
+      text-shadow: 0 0 10px #ff6ec4, 0 0 20px #ff6ec4, 0 0 30px #ff6ec4;
+    }
+
+    /* Banner */
+    .banner {
+      margin: 20px 0;
+      padding: 60px 20px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px #ff6ec4aa;
+      animation: glowPulse 3s ease-in-out infinite alternate;
+      max-width: 400px;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.3);
+      text-align: center;
+    }
+
+    .banner h1 {
+      font-size: 2.4rem;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+    }
+
+    .banner p {
+      font-size: 1.2rem;
+      font-style: italic;
+      text-shadow: 0 0 8px #fff8;
+    }
+
+    @keyframes glowPulse {
+      0% {
+        box-shadow: 0 0 20px #ff6ec4aa, 0 0 40px #ff6ec4cc;
+      }
+
+      100% {
+        box-shadow: 0 0 35px #ff6ec4ee, 0 0 70px #ff6ec4ff;
+      }
+    }
+
+    /* Wishes */
+    .wishes {
+      margin: 30px 0;
+      max-width: 400px;
+      width: 100%;
+      background: rgba(255 255 255 / 0.15);
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 0 20px #7873f5aa;
+      animation: glowPulseBlue 3s ease-in-out infinite alternate;
+    }
+
+    .wishes h2 {
+      margin-bottom: 15px;
+      color: #ffe066;
+      text-shadow: 0 0 12px #ffe066aa;
+    }
+
+    .wish-list {
+      list-style: none;
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #fff;
+      text-shadow: 0 0 8px #00000055;
+    }
+
+    .wish-list li {
+      margin-bottom: 12px;
+      padding-left: 15px;
+      position: relative;
+      font-weight: 600;
+    }
+
+    /* .wish-list li::before {
+      content: "🎂 ";
+      position: absolute;
+      left: 0;
+      top: 0;
+    } */
+
+    @keyframes glowPulseBlue {
+      0% {
+        box-shadow: 0 0 20px #7873f5aa, 0 0 40px #7873f5cc;
+      }
+
+      100% {
+        box-shadow: 0 0 35px #7873f5ee, 0 0 70px #7873f5ff;
+      }
+    }
+
+    /* Inspirational & Special sections */
+    .inspiration,
+    .special {
+      max-width: 600px;
+      width: 100%;
+      margin: 30px 0;
+      background: rgba(255 255 255 / 0.15);
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 0 20px #ffe066aa;
+      animation: glowPulse 3s ease-in-out infinite alternate;
+    }
+
+    .inspiration h2,
+    .special h2 {
+      text-align: center;
+      color: #ffe066;
+      text-shadow: 0 0 12px #ffe066aa;
+      margin-bottom: 15px;
+    }
+
+    .inspiration p,
+    .special p {
+      color: #fff;
+      text-shadow: 0 0 8px #00000055;
+      line-height: 1.6;
+      font-size: 1rem;
+      text-align: justify;
+    }
+
+    /* Photo gallery stacked */
+    .gallery {
+      max-width: 400px;
+      width: 100%;
+      margin: 30px 0;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 0 20px #ff6ec4aa;
+      animation: glowPulse 3s ease-in-out infinite alternate;
+    }
+
+    .gallery h2 {
+      margin-bottom: 15px;
+      color: #ffe066;
+      text-align: center;
+      text-shadow: 0 0 12px #ffe066aa;
+    }
+
+    .gallery-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .gallery-stack img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 0 10px #ff6ec4bb;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery-stack img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px #ff6ec4ff;
+      z-index: 10;
+      position: relative;
+    }
+
+    /* Video section */
+    .videos {
+      max-width: 400px;
+      width: 100%;
+      margin: 30px 0;
+      background: rgba(255 255 255 / 0.15);
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 0 20px #7873f5aa;
+      animation: glowPulseBlue 3s ease-in-out infinite alternate;
+    }
+
+    .videos h2 {
+      margin-bottom: 15px;
+      color: #ffe066;
+      text-align: center;
+      text-shadow: 0 0 12px #ffe066aa;
+    }
+
+    .videos video {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+      margin-bottom: 30px;
+      box-shadow: 0 0 20px #7873f5aa;
+    }
+
+    .videos p {
+      text-align: center;
+      font-size: 1rem;
+      color: #fff;
+      text-shadow: 0 0 8px #00000055;
+      margin-bottom: 15px;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: auto;
+      padding: 15px 0;
+      font-size: 1rem;
+      text-align: center;
+      color: #fff;
+      text-shadow:
+        0 0 5px #ff6ec4,
+        0 0 10px #ff6ec4,
+        0 0 15px #ff6ec4,
+        0 0 20px #ff6ec4;
+      user-select: none;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Banner -->
+  <section class="banner" role="banner" aria-label="Birthday banner">
+    <h1>Happy Birthday Virat Sir! 🎉</h1>
+    <p>"May your day be filled with happiness and success!"</p>
+  </section>
+
+  <!-- Birthday Wishes -->
+  <section class="wishes" aria-label="Birthday wishes">
+    <h2>Birthday Wishes & Messages</h2>
+    <ul class="wish-list">
+      <li>Happy Birthday Sir! Thank you for always guiding us with patience and care.</li>
+      <li>Your teaching and support mean so much to me. Wishing you a joyful year ahead!</li>
+      <li>May your day be full of laughter, good health, and happiness.</li>
+      <li>You inspire us every day with your dedication and sincerity.</li>
+      <li>Cheers to many more successful and happy years, Sir!</li>
+    </ul>
+  </section>
+
+  <!-- Inspirational Story -->
+  <section class="inspiration" aria-label="Inspirational story">
+    <h2>Inspirational Story</h2>
+    <p>
+  <strong>Virat sir,</strong><br><br>
+  As I understood till now, your <strong>journey</strong> has been truly <strong>inspiring</strong>. Being a <strong>student</strong> yourself once, you went through many <strong>struggles</strong> and <strong>painful moments</strong>, but you never gave up. Even when <strong>health</strong> didn’t support you, you stood <strong>strong</strong>, kept rising after every <strong>fall</strong>, and worked hard to follow your <strong>passion</strong> for <strong>teaching</strong>.<br><br>
+  In this field, you are not like others who just complete the <strong>subject</strong> and leave. You put in <strong>100% effort</strong> to make sure every <strong>concept</strong> is <strong>crystal clear</strong> for your <strong>students</strong>, and you never let anyone be left behind with <strong>doubts</strong>. More than that, your true aim is to see every <strong>student succeed</strong> in <strong>life</strong>. For you, our <strong>success</strong> is your <strong>success</strong>, and you guide us like a <strong>true mentor</strong>, showing us the <strong>right path</strong> to achieve our <strong>goals</strong>.<br><br>
+  Not only <strong>subject knowledge</strong>, you also teach us the <strong>values</strong> and <strong>lessons</strong> required to reach <strong>success</strong> in life. Truly, it’s a <strong>blessing</strong> and our <strong>luck</strong> to have a <strong>teacher</strong> like you, sir. Hats off to your <strong>dedication</strong> and <strong>sincerity</strong>.
+</p>
+
+  </section>
+
+  <!-- Photo Gallery (stacked) -->
+  <section class="gallery" aria-label="Photo gallery">
+    <h2>Photo Gallery</h2>
+    <div class="gallery-stack">
+      <img src="C:/Users/stude/Downloads/WhatsApp Image 2025-10-21 at 10.27.59 AM.jpeg" alt="Image 1" loading="lazy" />
+      <img src="C:/Users/stude/Downloads/WhatsApp Image 2025-10-21 at 10.27.59 AM (1).jpeg" alt="Image 2" loading="lazy" />
+      <img src="C:/Users/stude/Downloads/WhatsApp Image 2025-10-21 at 10.28.00 AM.jpeg" alt="Image 3" loading="lazy" />
+      <img src="C:/Users/stude/Downloads/viratSirclass.jpg" alt="Image 4" loading="lazy" />
+      <img src="C:/Users/stude/Downloads/class.jpg" alt="Image 5" loading="lazy" />
+      <img src="C:/Users/stude/Downloads/WhatsApp Image 2025-10-21 at 10.46.53 AM.jpeg" alt="Image 6" loading="lazy" />
+    </div>
+  </section>
+
+  <!-- Special Memory -->
+  <section class="special" aria-label="Special memory">
+    <h2>Special Memory</h2>
+    <p>
+      <center>Sir, I always follow them like this.</center>
+    </p>
+    <div style="max-width:400px; margin:0 auto; border-radius:12px; overflow:hidden;">
+<div style="max-width:400px; margin:0 auto; border-radius:12px; overflow:hidden; display:flex; flex-direction:column; gap:15px;">
+  <img src="C:/Users/stude/Downloads/WhatsApp Image 2025-10-21 at 12.19.36 PM.jpeg" alt="Special Memory 2" style="width:100%; border-radius:12px;" loading="lazy" />
+</div>
+    </div>
+  </section>
+  <!-- Special Memory -->
+<!-- Special Memory -->
+
+
+  <!-- Intro Text -->
+ <!-- Special Memory -->
+<section class="special" aria-label="Special memory" style="max-width:500px; margin:30px auto; text-align:center;">
+  
+  <!-- Intro Text -->
+  <p style="color:#000; font-size:1rem; line-height:1.6; font-weight:bold; margin-bottom:20px;">
+    Life long memorable words from you sir, can't forget anytime…. I have laughed a lot when you use these words:
+  </p>
+
+  <!-- Highlighted words -->
+  <div style="display:flex; flex-direction:column; gap:12px; align-items:center; justify-content:center; font-size:1.2rem; font-weight:600;">
+    <span style="background:yellow; color:#000; padding:4px 8px; border-radius:4px;">Telugu radu</span>
+    <span style="background:yellow; color:#000; padding:4px 8px; border-radius:4px;">Sigguledu</span>
+    <span style="background:yellow; color:#000; padding:4px 8px; border-radius:4px;">Koncham koncham</span>
+    <span style="background:yellow; color:#000; padding:4px 8px; border-radius:4px;">Arey</span>
+  </div>
+
+</section>
+
+
+
+
+  <!-- Video Section -->
+  <section class="videos" aria-label="Video section">
+    <h2>Videos</h2>
+
+    <p>Always not only education sir you also teached us many life lessons</p>
+    <video controls>
+      <source src="C:/Users/stude/Downloads/WhatsApp Video 2025-10-21 at 10.28.02 AM.mp4" type="video/mp4">
+    </video>
+
+    <p>During break at least you are sitting, you always stand sir</p>
+    <video controls>
+      <source src="C:/Users/stude/Downloads/WhatsApp Video 2025-10-21 at 10.28.01 AM.mp4" type="video/mp4">
+    </video>
+
+    <p>This is for my favourite sir, it's you sir!</p>
+    <video controls>
+      <source src="C:/Users/stude/Downloads/WhatsApp Video 2025-10-21 at 11.02.20 AM.mp4" type="video/mp4">
+    </video>
+
+    <p>Sir you have made us understand this all lines! and I'm very lucky and proud that you are my trainer.</p>
+    <video controls>
+      <source src="C:/Users/stude/Downloads/WhatsApp Video 2025-10-21 at 11.02.33 AM.mp4" type="video/mp4">
+    </video>
+
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    yours sincerly student Chinari
+  </footer>
+
+</body>
+
+</html>
